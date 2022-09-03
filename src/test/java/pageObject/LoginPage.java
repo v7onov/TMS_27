@@ -7,16 +7,16 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends BasePage {
 
-    private By LOG_IN_BUTTON;
-    private By REGISTRATION_BUTTON;
+    private By LOG_IN_BUTTON = By.xpath("//span[contains(text(), 'Войти')]");
+    private By REGISTRATION_BUTTON = By.xpath("//span[contains(text(), 'Зарегистрироваться')]");
     private By USERNAME = By.xpath("//p[text()='User Name']/following-sibling::input");
     private By EMAIL = By.xpath("//p[text()='Email']/following-sibling::input");
     private By PASSWORD = By.xpath("//p[text()='Password']/following-sibling::input");
     private By FIRST_NAME = By.xpath("//p[text()='First Name']/following-sibling::input");
     private By LAST_NAME = By.xpath("//p[text()='Last Name']/following-sibling::input");
     private By PHONE_NUMBER = By.xpath("//p[text()='Phone Number']/following-sibling::input");
-    private By CREATE_ACCOUNT_BUTTON;
-    private By PERFORM_LOG_IN_BUTTON;
+    private By CREATE_ACCOUNT_BUTTON = By.xpath("//button[text()='Зарегистрироваться']");
+    private By PERFORM_LOG_IN_BUTTON = By.xpath("//button[text()='Войти']");
     private By REGISTRATION_CONFIRMATION;
 
     public LoginPage(WebDriver driver) {
@@ -47,7 +47,7 @@ public class LoginPage extends BasePage {
         driver.findElement(CREATE_ACCOUNT_BUTTON).click();
     }
 
-    public String getRegistrationMessage(){
-        return driver.findElement(REGISTRATION_CONFIRMATION).getText();
+    public String getNotificationText(){
+        return driver.switchTo().alert().getText();
     }
 }

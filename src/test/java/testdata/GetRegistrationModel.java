@@ -12,9 +12,9 @@ public class GetRegistrationModel {
                 .username("ВесёлыйФермер")
                 .email(propertiesManager.get("EMAIL"))
                 .password(propertiesManager.get("PASSWORD"))
-                .firstName("")
-                .lastName("")
-                .phoneNumber("")
+                .firstName("Анатолий")
+                .lastName("Вассерман")
+                .phoneNumber("222-33-22")
                 .build();
     }
 }

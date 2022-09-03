@@ -5,13 +5,13 @@ import org.openqa.selenium.WebDriver;
 
 public class AdPage extends BasePage {
 
-    private By TITLE;
-    private By DESCRIPTION;
-    private By CATEGORY;
-    private By PRICE;
-    private By PICTURE;
-    private By LOCATION;
-    private By CONTACTS;
+    private By TITLE = By.id("title");
+    private By DESCRIPTION = By.id("description");
+    private By CATEGORY = By.id("category");
+    private By PRICE = By.id("price");
+    private By PICTURE = By.id("picture");
+    private By LOCATION = By.id("location");
+    private By CONTACTS = By.id("contacts");
     private By SEND_MESSAGE;
     private By MESSAGE_FIELD;
     private By SEND_BUTTON;

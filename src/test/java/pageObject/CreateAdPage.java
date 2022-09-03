@@ -6,14 +6,14 @@ import org.openqa.selenium.WebDriver;
 
 public class CreateAdPage extends BasePage {
 
-    private By TITLE;
-    private By DESCRIPTION;
-    private By CATEGORY;
-    private By PRICE;
-    private By PICTURE;
-    private By LOCATION;
-    private By CONTACTS;
-    private By SAVE_BUTTON;
+    private By TITLE = By.xpath("//p[text()='Title']/following-sibling::input");
+    private By DESCRIPTION = By.xpath("//p[text()='Description']/following-sibling::input");
+    private By CATEGORY = By.xpath("//p[text()='Category']/following-sibling::input");
+    private By PRICE = By.xpath("//p[text()='Price']/following-sibling::input");
+    private By PICTURE = By.xpath("//p[text()='Picture']/following-sibling::input");
+    private By LOCATION = By.xpath("//p[text()='Location']/following-sibling::input");
+    private By CONTACTS = By.xpath("//p[text()='Contacts']/following-sibling::input");
+    private By SAVE_BUTTON = By.xpath("//button[contains(text(), 'Добавить товар']");
 
     public CreateAdPage(WebDriver driver) {
         super(driver);

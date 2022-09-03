@@ -3,6 +3,7 @@ package tests;
 import driverfactory.DriverFactory;
 import driverfactory.DriverManager;
 import driverfactory.DriverType;
+import lombok.extern.log4j.Log4j;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
