@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Simple Test" thread-count="1" parallel="tests">
+    <test name="Smoke test">
+        <classes>
+            <class name="tests.RegistrationTest"></class>
+            <class name="tests.LoginTest"></class>
+            <class name="tests.CreateAdTest"></class>
+            <class name="tests.EditAdTest"></class>
+            <class name="tests.SearchBarTest"></class>
+            <parameter name="browser" value="chrome"></parameter>
+        </classes>
+    </test>
+
+</suite>
