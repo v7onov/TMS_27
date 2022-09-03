@@ -7,12 +7,12 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CreateAdPage extends BasePage {
 
-    private By TITLE = By.xpath("//p[text()='Title']/following-sibling::input");
-    private By DESCRIPTION = By.xpath("//p[text()='Description']/following-sibling::input");
+    private By TITLE = By.id("name");
+    private By DESCRIPTION = By.id("description");
     private By CATEGORY = By.xpath("//select");
-    private By PRICE = By.xpath("//p[text()='Price']/following-sibling::input");
-    private By PICTURE = By.xpath("//p[text()='Picture']/following-sibling::input");
-    private By SAVE_BUTTON = By.xpath("//a[contains(text(), 'Добавить продукт']");
+    private By PRICE = By.id("price");
+    private By PICTURE = By.id("picture");
+    private By SAVE_BUTTON = By.id("save");
 
     public CreateAdPage(WebDriver driver) {
         super(driver);
@@ -29,6 +29,6 @@ public class CreateAdPage extends BasePage {
         driver.findElement(TITLE).sendKeys(createAdModel.getTitle());
         driver.findElement(DESCRIPTION).sendKeys(createAdModel.getDescription());
         driver.findElement(PRICE).sendKeys(createAdModel.getPrice());
-        driver.findElement(PICTURE).sendKeys(createAdModel.getPicture());
+//        driver.findElement(PICTURE).sendKeys(createAdModel.getPicture());
     }
 }
