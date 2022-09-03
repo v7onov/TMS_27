@@ -18,9 +18,10 @@ public class RegistrationTest extends BaseTest {
         MainPage mainPage = new MainPage(driver);
         LOGGER.debug("Attempting to open main page");
         mainPage.openMainPage();
+        LOGGER.debug("Attempting to open registration page");
         mainPage.clickSignInButton();
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.clickRegistrationButton();
+//        loginPage.clickRegistrationButton();
         LOGGER.debug("Filling all fields and trying to register a new user");
         loginPage.sendData(GetRegistrationModel.getRegistrationModelWithAllFields());
         Assert.assertEquals(loginPage.getNotificationText(), "Вы прошли регистрацию");

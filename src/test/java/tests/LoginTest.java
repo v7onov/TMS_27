@@ -21,6 +21,7 @@ public class LoginTest extends BaseTest {
         LOGGER.debug("Logging in");
         LoginPage loginPage = new LoginPage(driver);
         loginPage.clickLoginButton();
+        LOGGER.debug("Sending login and password to fields");
         loginPage.sendData(GetLoginModel.getLoginModelWithAllFields());
         Assert.assertTrue(mainPage.getLoginStatus());
         }

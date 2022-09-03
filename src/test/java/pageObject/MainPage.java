@@ -16,7 +16,7 @@ public class MainPage extends BasePage {
     private By MEAT_CATEGORY;
     private By VEGETABLES_CATEGORY;
     private By HONEY_CATEGORY;
-    private By CREATE_AD_BUTTON;
+    private By CREATE_AD_BUTTON = By.xpath("//a[contains(text(), 'Подать объявление')]");
     private By POP_UP_MESSAGE_BAR;
     private By SEARCH_RESULT;
     private By CATALOGUE_BUTTON = By.xpath("//a[@href='/catalog']");
@@ -46,7 +46,7 @@ public class MainPage extends BasePage {
     }
 
     public void moveToCatalogue(){
-        driver.findElement(USER_BUTTON).click();
+        driver.findElement(CATALOGUE_BUTTON).click();
     }
 
     public String getNotificationText(){
