@@ -14,8 +14,6 @@ public class GetCreateAdModel {
                 .category("Овощи")
                 .price("200")
                 .picture(POTATOES)
-                .location("Брест")
-                .contacts("222-33-22")
                 .build();
     }
 }
